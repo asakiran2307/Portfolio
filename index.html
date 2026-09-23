@@ -1,583 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Meta Tags -->
-    <title>Grandhi Ashakiran - Web Developer Portfolio</title>
-    <meta name="description"
-        content="B.Tech student specializing in web development, Python, and rapid prototyping. Creator of ExamPortal, Digital Electronics Lab, and more.">
-    <meta name="keywords" content="web developer, student developer, JavaScript, Python, portfolio, Ashakiran">
-    <meta name="author" content="Grandhi Ashakiran">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourportfolio.vercel.app/">
-    <meta property="og:title" content="Grandhi Ashakiran - Web Developer Portfolio">
-    <meta property="og:description" content="B.Tech student & web developer. Building innovative web applications.">
-    <meta property="og:image" content="https://yourportfolio.vercel.app/profile-photo.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourportfolio.vercel.app/">
-    <meta property="twitter:title" content="Grandhi Ashakiran - Web Developer">
-    <meta property="twitter:description"
-        content="B.Tech student & web developer. Building innovative web applications.">
-    <meta property="twitter:image" content="https://yourportfolio.vercel.app/profile-photo.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- External Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-        type="module"></script>
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiran — 3D Developer Portfolio</title>
+<meta name="description" content="Kiran — B.Tech CSE developer building secure, scalable and smart solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050914;--s:#0a1020;--c:#0d1628;--g:#ffb52e;--gl:#ffd66b;--b:#1da9ff;--cy:#38d9ff;--p:#7c4dff;--w:#f5f7ff;--m:#aab4c8;--l:#233453}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--w);font-family:Inter,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");z-index:99}
+.nav{position:fixed;z-index:20;top:0;left:0;right:0;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;transition:.3s}.nav.scrolled{background:#050914c9;backdrop-filter:blur(18px);border-bottom:1px solid #233453}.brand{font:700 14px "Space Grotesk";letter-spacing:.18em;display:flex;align-items:center;gap:10px}.brand b{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--g);color:var(--g);font-size:18px}.links{display:flex;gap:26px}.links a{font:9px "Space Grotesk";letter-spacing:.16em;color:#8591a7;text-transform:uppercase}.links a:hover,.links a.active{color:var(--g)}.navbtn{border:1px solid var(--g);border-radius:30px;background:transparent;color:var(--g);padding:10px 15px;font:9px "Space Grotesk";letter-spacing:.12em}.menu{display:none;background:none;border:0;font-size:26px}
+section{padding:130px 6vw;position:relative}.hero{min-height:100vh;padding-top:130px;display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden}.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.7}.grid{position:absolute;inset:0;background-image:linear-gradient(#23345320 1px,transparent 1px),linear-gradient(90deg,#23345320 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(black,transparent)}.copy{position:relative;z-index:2}.eyebrow{font:9px "Space Grotesk";letter-spacing:.22em;color:#76839a}.eyebrow i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#54e98b;box-shadow:0 0 14px #54e98b;margin-right:8px}.hello{color:var(--m);margin-top:35px}.hero h1{font:700 clamp(76px,11vw,155px)/.83 "Space Grotesk";letter-spacing:-.08em;margin:12px 0 22px}.hero h1 span{color:var(--g)}.role{font:600 12px "Space Grotesk";letter-spacing:.25em;color:var(--b)}.lead{max-width:570px;color:var(--m);font-size:14px;line-height:1.8;margin:24px 0}.lead strong{color:var(--w)}.actions{display:flex;gap:10px}.btn{display:inline-flex;gap:24px;align-items:center;border-radius:30px;padding:14px 19px;font:700 10px "Space Grotesk";letter-spacing:.13em;text-transform:uppercase;transition:.25s}.gold{background:var(--g);color:#0a0c10}.ghost{border:1px solid var(--l);background:#0d162866}.btn:hover{transform:translateY(-4px);box-shadow:0 15px 40px #0006}.social{display:flex;gap:18px;margin-top:38px;color:#64728a;font:9px "Space Grotesk";letter-spacing:.13em}.social a:hover{color:var(--g)}
+.visual{position:relative;z-index:2;height:610px;display:grid;place-items:center}.frame{width:min(480px,78vw);height:560px;position:relative;transform-style:preserve-3d;transition:.12s}.glass{position:absolute;inset:35px 30px 15px 60px;border:1px solid #ffffff24;border-radius:26px;padding:10px;background:linear-gradient(145deg,#ffffff16,#ffffff03);backdrop-filter:blur(14px);box-shadow:0 35px 100px #0009;transform:rotateY(-7deg)}.back{inset:20px 60px 45px 25px;transform:rotateY(10deg);opacity:.4}.photo{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:18px;filter:saturate(.9)}.code{position:absolute;right:-10px;top:80px;background:#050b14e8;border:1px solid #1da9ff55;border-radius:12px;padding:14px;width:190px;box-shadow:0 20px 60px #0008;transform:translateZ(70px)}.code small{display:block;color:var(--b);font:8px "Space Grotesk";letter-spacing:.15em;margin-bottom:9px}.code pre{font:10px/1.7 monospace;color:#c7d3e6}.code em{color:#c08cff}.code b{color:var(--g);font-weight:500}.chip{position:absolute;border-radius:99px;padding:8px 12px;font:700 8px "Space Grotesk";letter-spacing:.17em;backdrop-filter:blur(10px)}.chip.one{left:0;top:145px;color:var(--g);border:1px solid #ffb52e66;background:#ffb52e0c}.chip.two{right:0;bottom:80px;color:var(--cy);border:1px solid #38d9ff66;background:#38d9ff0b}.orb{position:absolute;width:550px;height:550px;border:1px solid #ffb52e20;border-radius:50%;animation:spin 18s linear infinite}.orb2{width:410px;height:620px;border-color:#1da9ff20;transform:rotate(45deg);animation:spin 25s linear infinite reverse}
+.sectionhead{display:flex;gap:20px;margin-bottom:60px}.num{border:1px solid #ffb52e66;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;color:var(--g);font:10px "Space Grotesk"}.sectionhead small{font:9px "Space Grotesk";letter-spacing:.2em;color:#68758d}.sectionhead h2{font:600 clamp(42px,5vw,70px)/1 "Space Grotesk";letter-spacing:-.06em;margin-top:8px}.sectionhead em{color:var(--g);font-style:normal}
+.about{background:linear-gradient(180deg,var(--bg),var(--s))}.aboutgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:9vw;align-items:center}.textlead{font-size:23px;line-height:1.5;color:#d6deeb;margin-bottom:22px}.about p{color:var(--m);font-size:13px;line-height:1.8}.traits{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:35px}.trait{border-top:1px solid var(--l);padding:16px 3px}.trait b{font:9px "Space Grotesk";color:var(--g)}.trait h3{font:600 15px "Space Grotesk";margin:7px 0}.aboutpic{width:310px;height:420px;margin:auto;padding:10px;border:1px solid #ffffff20;background:#ffffff08;transform:rotate(6deg);box-shadow:0 30px 80px #0008}.aboutpic img{width:100%;height:100%;object-fit:cover;object-position:center top}.quote{font:700 23px/1 "Space Grotesk";color:#aab5c8;margin-top:40px}.quote span{color:var(--g)}
+.skills{background:var(--s)}.skilltop{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;align-items:center}.pills{display:flex;flex-wrap:wrap;gap:9px}.pill{padding:11px 15px;border:1px solid var(--l);border-radius:99px;color:#b8c3d5;font:10px "Space Grotesk"}.pill:hover{border-color:var(--b);color:var(--b)}.pill.g{border-color:#ffb52e66;color:var(--g)}.pill.p{border-color:#7c4dff66;color:#b39aff}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:65px}.card{min-height:260px;border:1px solid var(--l);background:#ffffff04;border-radius:20px;padding:22px;transition:.3s}.card:hover{transform:translateY(-7px);border-color:#ffb52e66}.card .ico{font-size:28px;color:var(--g);margin:30px 0 20px}.card h3{font:600 18px "Space Grotesk";margin-bottom:10px}.card p{font-size:11px;color:var(--m);line-height:1.7}.tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:20px}.tags i{font:8px "Space Grotesk";font-style:normal;border:1px solid var(--l);padding:4px 6px;color:#738099}
+.projects{background:linear-gradient(var(--s),var(--bg))}.toolbar{display:flex;justify-content:space-between;border-bottom:1px solid var(--l);padding-bottom:12px;margin-bottom:20px}.toolbar small{font:9px "Space Grotesk";letter-spacing:.15em;color:#68758d}.filters button{background:none;border:1px solid transparent;border-radius:20px;padding:6px 10px;color:#728099;font:9px "Space Grotesk";cursor:pointer}.filters button.active,.filters button:hover{color:var(--g);border-color:#ffb52e55}.projectsgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.project{border:1px solid var(--l);background:var(--c);border-radius:19px;overflow:hidden;transition:.3s;cursor:pointer}.project:hover{transform:translateY(-7px);border-color:#ffb52e66}.project.hidden{display:none}.projectimg{height:250px;display:grid;place-items:center;position:relative;overflow:hidden}.p1{background:radial-gradient(circle,#1da9ff44,transparent 40%),#0a1220}.p2{background:radial-gradient(circle,#ffb52e33,transparent 40%),#11151e}.p3{background:#07111d}.p4{background:radial-gradient(circle,#7c4dff44,transparent 40%),#090d1a}.p5{background:radial-gradient(circle,#38d9ff2d,transparent 40%),#07141c}.p6{background:radial-gradient(circle,#ffb52e22,transparent 40%),#12141a}.mock{width:72%;padding:25px;border:1px solid #2b4768;border-radius:12px;background:#050b14dd;box-shadow:0 25px 60px #0008;transform:rotate(-4deg)}.mock b{font:700 27px/1 "Space Grotesk";display:block}.mock small{font:8px "Space Grotesk";color:var(--b);letter-spacing:.15em}.terminal{font:700 30px monospace;color:#72efb4}.terminal small{display:block;font:8px monospace;color:#66758d}.bigmark{font:700 65px "Space Grotesk";color:#dce4f1}.bigmark span{color:var(--g)}.face{font-size:90px;color:#b49cff;text-shadow:0 0 40px #7c4dff66}.circuit{display:grid;grid-template-columns:1fr 1fr;gap:7px;width:70%}.circuit span{padding:17px;border:1px solid #2b596e;color:var(--cy);font:9px "Space Grotesk";text-align:center}.rps{display:flex;gap:10px}.rps span{width:65px;height:65px;border-radius:50%;border:1px solid #554e38;display:grid;place-items:center;font-size:28px}.pinfo{display:flex;justify-content:space-between;align-items:center;padding:17px}.pinfo small{font:8px "Space Grotesk";color:#68758d;letter-spacing:.14em}.pinfo h3{font:600 15px "Space Grotesk";margin-top:4px}.pinfo button{background:none;color:var(--g);cursor:pointer}
+.experience{background:var(--s)}.timeline{max-width:980px;margin:auto;position:relative}.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(var(--g),#23345322)}.event{display:grid;grid-template-columns:1fr 60px 1fr;gap:25px;min-height:190px}.node{grid-column:2;width:40px;height:40px;border:1px solid #ffb52e66;border-radius:50%;display:grid;place-items:center;color:var(--g);font:9px "Space Grotesk";background:var(--s);z-index:2}.meta{text-align:right;font:9px "Space Grotesk";color:#718098;padding-top:5px}.meta b{display:block;color:var(--g);margin-top:5px}.event:nth-child(even) .meta{grid-column:3;text-align:left}.box{grid-column:3;border:1px solid var(--l);border-radius:17px;padding:20px;background:#ffffff04}.event:nth-child(even) .box{grid-column:1;grid-row:1}.box small{font:8px "Space Grotesk";color:#69768c;letter-spacing:.18em}.box h3{font:21px "Space Grotesk";margin:5px 0}.box h4{font-size:11px;color:var(--b);font-weight:500}.box p{font-size:11px;color:var(--m);margin-top:9px;line-height:1.7}
+.cert{background:var(--bg)}.certgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw;align-items:center}.certcard{width:280px;height:350px;margin:auto;border:1px solid #ffb52e66;background:linear-gradient(145deg,#ffb52e18,#ffffff03);padding:30px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-6deg);box-shadow:0 30px 80px #0008}.seal{width:45px;height:45px;border:1px solid var(--g);border-radius:50%;display:grid;place-items:center;color:var(--g);font:700 17px "Space Grotesk"}.certcard strong{font:700 34px/.9 "Space Grotesk";letter-spacing:-.05em}.certcard small{font:8px "Space Grotesk";letter-spacing:.2em;color:#77839a}.certlist{border-top:1px solid var(--l)}.certitem{display:grid;grid-template-columns:40px 1fr 20px;gap:10px;align-items:center;padding:19px 4px;border-bottom:1px solid var(--l)}.certitem>span{font:9px "Space Grotesk";color:var(--g)}.certitem small{font:8px "Space Grotesk";color:#718099;letter-spacing:.15em}.certitem h3{font:600 15px "Space Grotesk";margin-top:3px}.certitem b{color:#748199}
+.contact{background:linear-gradient(var(--bg),#02050c)}.contactbox{max-width:1200px;margin:auto;border:1px solid var(--l);border-radius:28px;padding:55px;display:grid;grid-template-columns:1fr 170px 1fr;gap:45px;align-items:center;background:#ffffff04}.contactbox h2{font:600 clamp(50px,6vw,80px)/.9 "Space Grotesk";letter-spacing:-.07em;margin:20px 0}.contactbox h2 em{font-style:normal;color:var(--g)}.contactbox p{color:var(--m);font-size:13px;line-height:1.7}.orbx{height:170px;display:grid;place-items:center;position:relative}.core{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:var(--g);color:#111;box-shadow:0 0 70px #ffb52e55}.ring{position:absolute;width:145px;height:145px;border:1px solid #ffb52e55;border-radius:50%;animation:spin 9s linear infinite}.ring.r2{width:185px;height:185px;border-color:#1da9ff33;animation-direction:reverse;animation-duration:15s}.form{display:grid;gap:18px}.form label{border-bottom:1px solid var(--l);padding-bottom:7px}.form label span{display:block;font:8px "Space Grotesk";letter-spacing:.16em;color:#68758d;margin-bottom:6px}.form input,.form textarea{width:100%;background:none;border:0;outline:0;color:var(--w);font-size:12px;resize:none}.form .btn{border:0}.note{font-size:10px!important;color:#55e98b!important;min-height:15px}
+footer{min-height:370px;background:#02050c;padding:70px 6vw 35px;position:relative}.footer{max-width:1200px;margin:auto;height:270px;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:end}.fk{font:700 100px/.7 "Space Grotesk";color:var(--g)}footer p,footer a{font:9px "Space Grotesk";letter-spacing:.17em;color:#65728a}.fq{font:700 55px/.9 "Space Grotesk";letter-spacing:-.06em}.fq em{font-style:normal;color:var(--g)}.fr{text-align:right;display:flex;flex-direction:column;gap:15px}
+.modal{display:none;position:fixed;inset:0;z-index:50;place-items:center;padding:25px}.modal.open{display:grid}.shade{position:absolute;inset:0;background:#000b;backdrop-filter:blur(12px)}.dialog{position:relative;max-width:600px;width:100%;padding:40px;border:1px solid #ffb52e66;border-radius:24px;background:#0d1628;box-shadow:0 40px 120px #000}.close{position:absolute;right:18px;top:10px;background:none;border:0;font-size:30px;cursor:pointer}.dialog small{font:8px "Space Grotesk";color:var(--g);letter-spacing:.18em}.dialog h2{font:600 40px "Space Grotesk";margin:8px 0 15px}.dialog p{color:var(--m);font-size:13px;line-height:1.8}.tech{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0}.tech span{font:8px "Space Grotesk";border:1px solid var(--l);padding:6px 8px;border-radius:5px;color:#8a97ac}
+.reveal{opacity:0;transform:translateY(24px);transition:.75s}.reveal.show{opacity:1;transform:none}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:950px){.links{display:none}.menu{display:block}.navbtn{display:none}.hero{grid-template-columns:1fr}.visual{height:570px}.cards{grid-template-columns:1fr 1fr}.projectsgrid{grid-template-columns:1fr 1fr}.skilltop,.aboutgrid,.certgrid{grid-template-columns:1fr}.contactbox{grid-template-columns:1fr;padding:35px}.orbx{order:3}.aboutpic{margin-top:20px}.timeline:before{left:20px}.event{grid-template-columns:50px 1fr;gap:15px;min-height:auto;margin-bottom:25px}.node{grid-column:1}.meta,.event:nth-child(even) .meta{grid-column:2;text-align:left}.box,.event:nth-child(even) .box{grid-column:2;grid-row:2}.footer{grid-template-columns:1fr 1fr}.fr{text-align:left}.fq{font-size:44px}}@media(max-width:600px){section{padding:100px 6vw}.hero{padding-top:120px}.hero h1{font-size:21vw}.visual{height:490px}.frame{height:440px}.glass{inset:20px 20px 15px 30px}.back{inset:10px 40px 35px 5px}.code{width:145px;right:-5px;top:55px}.code pre{font-size:8px}.orb{width:390px;height:390px}.orb2{width:310px;height:480px}.traits,.cards,.projectsgrid{grid-template-columns:1fr}.projectimg{height:220px}.sectionhead{margin-bottom:45px}.sectionhead h2{font-size:42px}.footer{grid-template-columns:1fr;height:370px}.fq{margin-top:45px}.fr{margin-top:45px}.social{font-size:8px;gap:10px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
-
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <svg width="100" height="100" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" stroke="url(#gradient)" stroke-width="4" fill="none"
-                        stroke-dasharray="283" stroke-dashoffset="283" class="loading-circle" />
-                    <defs>
-                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#00D9FF;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#6B5B95;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-            <div class="loading-text">Loading Portfolio...</div>
-            <div class="loading-percentage">0%</div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="nav" id="mainNav">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <span class="gradient-text">Ashakiran</span>
-            </a>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <canvas id="particleCanvas" class="particle-canvas"></canvas>
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-greeting">
-                    <span class="wave">👋</span>
-                    <span class="greeting-text">Hello, I'm</span>
-                </div>
-                <h1 class="hero-title">
-                    <span class="title-line">Grandhi Ashakiran</span>
-                </h1>
-                <div class="hero-subtitle">
-                    <span class="typewriter"
-                        data-words='["Web Developer", "Rapid Prototyper", "Vibe Coder", "Problem Solver"]'></span>
-                </div>
-                <p class="hero-description">
-                    Rapid prototyper and vibe coder leveraging AI-assisted tools to build web applications. 2nd-year
-                    B.Tech student turning ideas into reality.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="magnetic-btn btn-primary">
-                        <span>View My Work</span>
-                        <span class="btn-icon">→</span>
-                    </a>
-                    <a href="#contact" class="magnetic-btn btn-secondary">
-                        <span>Get In Touch</span>
-                        <span class="btn-icon">✉</span>
-                    </a>
-                </div>
-                <div class="hero-social">
-                    <a href="https://github.com/asakiran2307" target="_blank" class="social-link" aria-label="GitHub">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/grandhi-ashakiran-11b906323" target="_blank" class="social-link"
-                        aria-label="LinkedIn">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/yourusername" target="_blank" class="social-link" aria-label="Twitter">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <div class="scroll-text">Scroll Down</div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="section-number">01.</span>
-                <span class="gradient-text">About Me</span>
-            </h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-paragraph">
-                        Hey! I'm a rapid prototyper and vibe coder who loves turning ideas into reality. I leverage
-                        AI-assisted
-                        tools to build things faster and smarter, focusing on what matters most - solving real problems
-                        with clean,
-                        functional code.
-                    </p>
-                    <p class="about-paragraph">
-                        I've spent countless hours learning web development, experimenting with new tech, and building
-                        projects
-                        that actually work. My approach? Use the best tools available (including AI), ship fast, and
-                        iterate based
-                        on real feedback. That's how I learn best - by actually doing it.
-                    </p>
-                    <p class="about-paragraph">
-                        When I'm not coding, I'm probably exploring new AI tools, debugging something interesting, or
-                        planning
-                        my next rapid prototype. I believe in working smart, not just hard - and that means embracing
-                        AI-assisted
-                        development to create better solutions faster.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="5">0</div>
-                            <div class="stat-label">Projects Built</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="10">0</div>
-                            <div class="stat-label">Technologies Learned</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="100">0</div>
-                            <div class="stat-label">GitHub Commits</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="100">0</div>
-                            <div class="stat-label">Hours of Coding</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <div class="image-border"></div>
-                        <img src="profile-photo.jpg" alt="Grandhi Ashakiran" class="profile-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="section-number">02.</span>
-                <span class="gradient-text">Skills & Expertise</span>
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="category-title">Frontend & Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">HTML5 & CSS3</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">C & Java</span>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="category-title">Tools & Platforms</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Git & GitHub</span>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Vercel</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">AI-Assisted Tools</span>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Bootstrap</span>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="category-title">Core Skills</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Web Development</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Rapid Prototyping</span>
-                                <span class="skill-percentage">88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">UI/UX Design</span>
-                                <span class="skill-percentage">82%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="82"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Problem Solving</span>
-                                <span class="skill-percentage">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tech Stack Cloud -->
-            <div class="tech-cloud">
-                <h3 class="cloud-title">Technologies I Work With</h3>
-                <div class="tech-tags">
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">C</span>
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">Git</span>
-                    <span class="tech-tag">GitHub</span>
-                    <span class="tech-tag">Vercel</span>
-                    <span class="tech-tag">Bootstrap</span>
-                    <span class="tech-tag">Responsive Design</span>
-                    <span class="tech-tag">UI/UX</span>
-                    <span class="tech-tag">Web Development</span>
-                    <span class="tech-tag">Rapid Prototyping</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="section-number">03.</span>
-                <span class="gradient-text">Featured Projects</span>
-            </h2>
-
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web Apps</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <img src="data:image/svg+xml,%3Csvg width='600' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300D9FF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%236B5B95;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='400' fill='url(%23grad1)'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='40' fill='white'%3EExam Portal%3C/text%3E%3C/svg%3E"
-                            alt="Exam Portal">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://exam-potral.vercel.app" class="project-link" target="_blank"
-                                    title="Live Demo">
-                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                        <path
-                                            d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Online Exam Portal</h3>
-                        <p class="project-description">
-                            A comprehensive examination management system with student registration, exam scheduling,
-                            real-time test taking, and automated result generation features.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML/CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <img src="data:image/svg+xml,%3Csvg width='600' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236B5B95;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230A0E27;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='400' fill='url(%23grad2)'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='40' fill='white'%3EDigital Lab%3C/text%3E%3C/svg%3E"
-                            alt="Digital Electronics Lab">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://digi-desgins.vercel.app" class="project-link" target="_blank"
-                                    title="Live Demo">
-                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                        <path
-                                            d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Digital Electronics Lab</h3>
-                        <p class="project-description">
-                            An interactive digital electronics learning platform with circuit simulations,
-                            virtual experiments, and comprehensive study materials for students.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML/CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <img src="data:image/svg+xml,%3Csvg width='600' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF6B6B;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%234ECDC4;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='400' fill='url(%23grad3)'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='40' fill='white'%3EThaimai Jasprit%3C/text%3E%3C/svg%3E"
-                            alt="Thaimai Jasprit Restaurant">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://thaimaijasprit.vercel.app" class="project-link" target="_blank"
-                                    title="Live Demo">
-                                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                        <path
-                                            d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Thaimai Jasprit Restaurant</h3>
-                        <p class="project-description">
-                            A modern restaurant website showcasing menu items, online ordering system,
-                            reservation functionality, and an elegant user interface for food delivery services.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML/CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Responsive Design</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more projects following the same pattern -->
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="section-number">04.</span>
-                <span class="gradient-text">Get In Touch</span>
-            </h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p class="contact-intro">
-                        I'm always open to new opportunities and collaborations! Whether you want to work on a project
-                        together or just chat about web development, feel free to reach out.
-                    </p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">📧</div>
-                            <div class="contact-text">
-                                <h4>Email</h4>
-                                <a href="mailto:asakiran.1107@gmail.com">asakiran.1107@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📱</div>
-                            <div class="contact-text">
-                                <h4>Phone</h4>
-                                <a href="tel:+916305969394">+91 6305969394</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-text">
-                                <h4>Location</h4>
-                                <p>Venkatagiri, Andhra Pradesh, India</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Your name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Your Email</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" required>
-                        <label for="subject">Subject</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <button type="submit" class="submit-btn magnetic-btn">
-                        <span class="btn-text">Send Message</span>
-                        <span class="btn-loading">Sending...</span>
-                        <span class="btn-success">✓ Sent!</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/asakiran2307" target="_blank" class="footer-link">GitHub</a>
-                    <a href="https://linkedin.com/in/grandhi-ashakiran-11b906323" target="_blank"
-                        class="footer-link">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Confetti Canvas (for contact form success) -->
-    <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+<header class="nav" id="nav"><a class="brand" href="#home"><b>K</b>KIRAN</a><nav class="links"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a></nav><a class="navbtn" href="#contact">Let's Talk ↗</a><button class="menu" id="menu">☰</button></header>
+<main>
+<section class="hero" id="home"><canvas id="scene"></canvas><div class="grid"></div><div class="copy reveal"><p class="eyebrow"><i></i>AVAILABLE FOR CREATIVE BUILDS · 2026</p><p class="hello">Hello, I'm</p><h1>KIRAN<span>.</span></h1><div class="role"><span id="role">DEVELOPER</span> / LEARNER</div><p class="lead">Turning ideas into <strong>secure, scalable and smart solutions.</strong> I build fast, learn continuously and ship experiences that feel as good as they work.</p><div class="actions"><a class="btn gold" href="#projects">Explore My Work ↗</a><a class="btn ghost" href="#contact">Contact Me →</a></div><div class="social"><a href="https://github.com/asakiran2307" target="_blank">GitHub ↗</a><a href="https://linkedin.com/in/grandhi-ashakiran-11b906323" target="_blank">LinkedIn ↗</a><span>INDIA · CSE</span></div></div><div class="visual reveal"><div class="orb"></div><div class="orb orb2"></div><div class="frame" id="frame"><div class="glass back"></div><div class="glass"><img class="photo" src="profile-photo.jpg" alt="Kiran in a light grey blazer"></div><div class="code"><small>kiran.dev</small><pre><em>const</em> idea = <b>build</b>();<br><em>while</em>(learning){<br> ship(idea);<br>}</pre></div><div class="chip one">BUILD</div><div class="chip two">CREATE</div></div></div></section>
+<section class="about" id="about"><div class="sectionhead reveal"><span class="num">01</span><div><small>PROFILE</small><h2>More than a <em>developer.</em></h2></div></div><div class="aboutgrid"><div class="reveal"><p class="textlead">I'm a B.Tech CSE student at <b>Joy University</b>, exploring web development, AI, cybersecurity and practical problem solving.</p><p>I enjoy taking an idea from a rough sketch to a working prototype. Understand the problem, choose the right tools, build quickly, test honestly and keep improving.</p><div class="traits"><article class="trait"><b>01</b><h3>Problem Solver</h3><p>Break complex ideas into practical systems.</p></article><article class="trait"><b>02</b><h3>Quick Learner</h3><p>Learn by building and iterating.</p></article><article class="trait"><b>03</b><h3>Team Player</h3><p>Build, lead and collaborate on real events.</p></article><article class="trait"><b>04</b><h3>Tech Enthusiast</h3><p>Always exploring useful new technology.</p></article></div></div><div class="reveal"><div class="aboutpic"><img src="profile-photo.jpg" alt="Kiran portrait"></div><div class="quote">BUILD SOMETHING <span>USEFUL.</span><br>THEN MAKE IT <span>BETTER.</span></div></div></div></section>
+<section class="skills" id="skills"><div class="sectionhead reveal"><span class="num">02</span><div><small>CAPABILITIES</small><h2>Tools I <em>build with.</em></h2></div></div><div class="skilltop"><p class="textlead reveal">A practical stack for turning ideas into polished prototypes and production-ready foundations.</p><div class="pills reveal"><span class="pill g">Python</span><span class="pill">JavaScript</span><span class="pill">HTML / CSS</span><span class="pill">React</span><span class="pill">Flask</span><span class="pill">MySQL</span><span class="pill g">Git / GitHub</span><span class="pill">Linux</span><span class="pill">Cyber Security</span><span class="pill">OpenCV</span><span class="pill p">AI / ML</span><span class="pill">Vercel</span><span class="pill">REST APIs</span><span class="pill g">Rapid Prototyping</span></div></div><div class="cards"><article class="card reveal"><div class="ico">⌘</div><h3>Web Development</h3><p>Responsive interfaces, dashboards and functional web applications.</p><div class="tags"><i>HTML</i><i>CSS</i><i>JS</i><i>React</i></div></article><article class="card reveal"><div class="ico">◈</div><h3>Python & Backend</h3><p>Automation, Flask applications, APIs and practical scripting.</p><div class="tags"><i>Python</i><i>Flask</i><i>MySQL</i></div></article><article class="card reveal"><div class="ico">⌬</div><h3>AI & Vision</h3><p>AI-assisted workflows and OpenCV experimentation.</p><div class="tags"><i>AI</i><i>OpenCV</i></div></article><article class="card reveal"><div class="ico">⟐</div><h3>Cybersecurity</h3><p>Security-focused learning, Linux and responsible exploration.</p><div class="tags"><i>Linux</i><i>Security</i></div></article></div></section>
+<section class="projects" id="projects"><div class="sectionhead reveal"><span class="num">03</span><div><small>SELECTED WORK</small><h2>Ideas made <em>real.</em></h2></div></div><div class="toolbar reveal"><small>PROJECT ARCHIVE / <b id="count">06</b></small><div class="filters"><button class="active" data-f="all">ALL</button><button data-f="web">WEB</button><button data-f="ai">AI</button><button data-f="system">SYSTEM</button></div></div><div class="projectsgrid">
+<article class="project reveal" data-cat="web" data-title="Smart Patient Portal" data-desc="A clean healthcare portal concept for patient-facing workflows, records and digital interaction." data-tech="HTML, CSS, JavaScript, UI/UX"><div class="projectimg p1"><div class="mock"><small>SMART</small><b>PATIENT<br>PORTAL</b></div></div><div class="pinfo"><div><small>WEB / 01</small><h3>Smart Patient Portal</h3></div><button>View ↗</button></div></article>
+<article class="project reveal" data-cat="system" data-title="Campus Complaint System" data-desc="A campus facility workflow concept connecting issue reporting, approvals, worker assignment and repair proof." data-tech="HTML, CSS, JavaScript, Workflow"><div class="projectimg p2"><div class="bigmark">CCS<span>+</span></div></div><div class="pinfo"><div><small>SYSTEM / 02</small><h3>Campus Complaint System</h3></div><button>View ↗</button></div></article>
+<article class="project reveal" data-cat="web" data-title="Flask WhatsApp Scheduler" data-desc="A Flask-based scheduling concept for organizing automated message workflows with a simple web interface." data-tech="Python, Flask, JavaScript"><div class="projectimg p3"><div class="terminal">READY_<small>FLASK / AUTOMATION</small></div></div><div class="pinfo"><div><small>WEB / 03</small><h3>WhatsApp Scheduler</h3></div><button>View ↗</button></div></article>
+<article class="project reveal" data-cat="ai" data-title="Emotion Detection" data-desc="An OpenCV project exploring real-time facial expression analysis through a webcam pipeline." data-tech="Python, OpenCV, Computer Vision"><div class="projectimg p4"><div class="face">◉</div></div><div class="pinfo"><div><small>AI / 04</small><h3>Emotion Detection</h3></div><button>View ↗</button></div></article>
+<article class="project reveal" data-cat="system" data-title="Digital Electronics Lab" data-desc="Interactive learning and experimentation interface for digital electronics concepts." data-tech="Web, JavaScript, Education"><div class="projectimg p5"><div class="circuit"><span>AND</span><span>OR</span><span>NOT</span><span>XOR</span></div></div><div class="pinfo"><div><small>SYSTEM / 05</small><h3>Digital Electronics Lab</h3></div><button>View ↗</button></div></article>
+<article class="project reveal" data-cat="web" data-title="Rock Paper Scissors" data-desc="A polished browser game built as a compact exercise in interaction design, state and responsive UI." data-tech="HTML, CSS, JavaScript"><div class="projectimg p6"><div class="rps"><span>✊</span><span>✋</span><span>✌</span></div></div><div class="pinfo"><div><small>WEB / 06</small><h3>Rock Paper Scissors</h3></div><button>View ↗</button></div></article>
+</div></section>
+<section class="experience" id="experience"><div class="sectionhead reveal"><span class="num">04</span><div><small>JOURNEY</small><h2>Learning through <em>leadership.</em></h2></div></div><div class="timeline">
+<article class="event reveal"><div class="meta"><span>2026 — PRESENT</span><b>LEADERSHIP</b></div><div class="node">01</div><div class="box"><small>ROLE</small><h3>Technical Lead</h3><h4>Embeddex Innovators Club</h4><p>Supporting technical initiatives, student projects and technology-driven events.</p></div></article>
+<article class="event reveal"><div class="meta"><span>2026</span><b>COMMUNITY</b></div><div class="node">02</div><div class="box"><small>ROLE</small><h3>Vice Chairman</h3><h4>ACM Student Chapter</h4><p>Supporting student engagement, technical activities and collaborative learning.</p></div></article>
+<article class="event reveal"><div class="meta"><span>ONGOING</span><b>BUILDING</b></div><div class="node">03</div><div class="box"><small>FOCUS</small><h3>B.Tech CSE</h3><h4>Joy University</h4><p>Developing projects across web development, AI, cybersecurity and problem solving.</p></div></article>
+<article class="event reveal"><div class="meta"><span>CONTINUOUS</span><b>EVENTS</b></div><div class="node">04</div><div class="box"><small>EXPERIENCE</small><h3>Hackathons & Tech Events</h3><h4>Builder / Organizer</h4><p>Learning through competitions, event management, prototypes and collaboration.</p></div></article>
+</div></section>
+<section class="cert" id="certifications"><div class="sectionhead reveal"><span class="num">05</span><div><small>CREDENTIALS</small><h2>Proof of <em>learning.</em></h2></div></div><div class="certgrid"><div class="reveal"><div class="certcard"><div class="seal">K</div><strong>LEARN.<br>BUILD.<br>REPEAT.</strong><small>2026 / KIRAN</small></div></div><div class="certlist"><article class="certitem reveal"><span>01</span><div><small>IBM</small><h3>Getting Started with AI</h3></div><b>↗</b></article><article class="certitem reveal"><span>02</span><div><small>DELOITTE</small><h3>Cyber Job Simulation</h3></div><b>↗</b></article><article class="certitem reveal"><span>03</span><div><small>TATA</small><h3>Cybersecurity Analyst Simulation</h3></div><b>↗</b></article><article class="certitem reveal"><span>04</span><div><small>PROGRAMMING</small><h3>Advanced C Programming</h3></div><b>↗</b></article><article class="certitem reveal"><span>05</span><div><small>DATA</small><h3>Data Engineering & Big Data</h3></div><b>↗</b></article></div></div></section>
+<section class="contact" id="contact"><div class="contactbox reveal"><div><p class="eyebrow">07 / CONTACT</p><h2>Let's <em>connect.</em></h2><p>Have an idea, project or collaboration? Send a message and let's build something useful.</p><div class="social"><a href="https://github.com/asakiran2307" target="_blank">GitHub ↗</a><a href="https://linkedin.com/in/grandhi-ashakiran-11b906323" target="_blank">LinkedIn ↗</a></div></div><div class="orbx"><div class="core">✦</div><div class="ring"></div><div class="ring r2"></div></div><form class="form" id="form"><label><span>01 / NAME</span><input required name="name" placeholder="Your name"></label><label><span>02 / EMAIL</span><input required type="email" name="email" placeholder="you@example.com"></label><label><span>03 / MESSAGE</span><textarea required name="message" rows="4" placeholder="Tell me what you're building..."></textarea></label><button class="btn gold" type="submit">Send Message ↗</button><p class="note" id="note"></p></form></div></section>
+</main>
+<footer><div class="footer"><div><div class="fk">K</div><p>BUILD · LEARN · CREATE · REPEAT</p></div><div class="fq">Dream.<br><em>Build.</em><br>Repeat.</div><div class="fr"><a href="#home">Back to top ↑</a><span>© 2026 Kiran</span></div></div></footer>
+<div class="modal" id="modal"><div class="shade" id="shade"></div><div class="dialog"><button class="close" id="close">×</button><small id="mk">PROJECT</small><h2 id="mt">Project</h2><p id="md"></p><div class="tech" id="tech"></div><a class="btn gold" href="https://github.com/asakiran2307/Portfolio" target="_blank">Open GitHub ↗</a></div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+const nav=document.getElementById("nav");addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>30),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.1});document.querySelectorAll(".reveal").forEach(x=>io.observe(x));
+const role=document.getElementById("role"),words=["DEVELOPER","RAPID PROTOTYPER","AI EXPLORER","PROBLEM SOLVER"];let wi=0,ci=0,back=false;setInterval(()=>{let w=words[wi];ci+=back?-1:1;if(ci>=w.length)back=true;if(ci<=0){back=false;wi=(wi+1)%words.length}role.textContent=w.slice(0,ci)},115);
+const frame=document.getElementById("frame");if(matchMedia("(pointer:fine)").matches){addEventListener("mousemove",e=>{let x=(e.clientX/innerWidth-.5)*2,y=(e.clientY/innerHeight-.5)*2;frame.style.transform="rotateY("+x*5+"deg) rotateX("+(-y*4)+"deg)"})}
+document.querySelectorAll(".links a").forEach(a=>a.onclick=()=>document.querySelectorAll(".links a").forEach(x=>x.classList.toggle("active",x===a)));
+const projects=[...document.querySelectorAll(".project")],filters=document.querySelectorAll(".filters button"),count=document.getElementById("count");filters.forEach(f=>f.onclick=()=>{filters.forEach(x=>x.classList.remove("active"));f.classList.add("active");let n=0;projects.forEach(p=>{let show=f.dataset.f==="all"||p.dataset.cat===f.dataset.f;p.classList.toggle("hidden",!show);if(show)n++});count.textContent=String(n).padStart(2,"0")});
+const modal=document.getElementById("modal"),mt=document.getElementById("mt"),md=document.getElementById("md"),mk=document.getElementById("mk"),tech=document.getElementById("tech");projects.forEach(p=>p.onclick=()=>{mk.textContent=p.dataset.cat.toUpperCase()+" / SELECTED";mt.textContent=p.dataset.title;md.textContent=p.dataset.desc;tech.innerHTML="";p.dataset.tech.split(",").forEach(t=>{let s=document.createElement("span");s.textContent=t.trim();tech.appendChild(s)});modal.classList.add("open");document.body.style.overflow="hidden"});function close(){modal.classList.remove("open");document.body.style.overflow=""}document.getElementById("close").onclick=close;document.getElementById("shade").onclick=close;addEventListener("keydown",e=>e.key==="Escape"&&close());
+document.getElementById("form").onsubmit=e=>{e.preventDefault();let d=new FormData(e.target);location.href="mailto:?subject="+encodeURIComponent("Portfolio contact from "+d.get("name"))+"&body="+encodeURIComponent("Email: "+d.get("email")+"\\n\\n"+d.get("message"));document.getElementById("note").textContent="Opening your email client…"});
+if(THREE&&!matchMedia("(prefers-reduced-motion:reduce)").matches){let c=document.getElementById("scene"),r=new THREE.WebGLRenderer({canvas:c,alpha:true,antialias:true});r.setPixelRatio(Math.min(devicePixelRatio,1.5));let s=new THREE.Scene(),cam=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,.1,100);cam.position.z=7;let g=new THREE.BufferGeometry(),n=420,a=new Float32Array(n*3);for(let i=0;i<n*3;i++)a[i]=(Math.random()-.5)*12;g.setAttribute("position",new THREE.BufferAttribute(a,3));s.add(new THREE.Points(g,new THREE.PointsMaterial({color:0x38d9ff,size:.018,transparent:true,opacity:.5})));let ring=new THREE.Mesh(new THREE.TorusGeometry(2.5,.008,8,150),new THREE.MeshBasicMaterial({color:0xffb52e,transparent:true,opacity:.25}));ring.rotation.x=1.15;s.add(ring);function size(){r.setSize(innerWidth,innerHeight);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}size();addEventListener("resize",size);(function loop(){requestAnimationFrame(loop);ring.rotation.z+=.002;s.rotation.y+=.0007;r.render(s,cam)})()}
+});
+</script>
+</body></html>
